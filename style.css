@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    position: relative;
+    background-color: black;
+}
+.jogo{
+    width: 100%;
+    height: 500px;
+    border-bottom:  1rem solid rgb(3, 82, 82);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    
+    animation: gradient 10s ease infinite;
+    background: linear-gradient(-45deg, rgb(235, 112, 11),rgb(252, 214, 4),rgb(41, 7, 231),white) no-repeat;
+    background-size: 300% 300%;
+}
+
+@keyframes gradient{ /*animaçao fundo*/
+    0%{
+        background-position: 0 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+    100%{
+        background-position: 0 50%;
+    }
+  
+
+}
+
+/*-------------------------*/
+.obstaculo{
+    position: absolute;
+    bottom: 0;
+    width: 5rem;
+    animation: obstaculo-animation 2s linear infinite;
+}
+@keyframes obstaculo-animation {  
+    from {
+        right: -5rem;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+/*-------------------------*/
+
+.pulo{
+    animation: pulo 500ms ease-out;
+}
+@keyframes pulo{
+
+    0%{
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 11.25rem;
+    }
+
+    60%{
+        bottom: 11.25rem;
+    }
+
+    50%{
+        bottom: 11.25rem;
+    }
+
+    100% {
+        bottom: 0 ;
+    }
+
+}
+/*-------------------------*/
+.nuvem{
+    position: absolute;
+    padding-top: 2rem;
+    width:22rem;
+    animation: nuvem-animation 20s infinite linear;
+}
+@keyframes nuvem-animation {  
+    from {
+        right: -22rem;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+/*-------------------------*/
+.ze{
+    position: absolute;
+    width: 9.375rem;
+    bottom: -2rem;
+}
+
+
+.buttons {
+    margin: auto;
+    text-align: center;
+    padding: 2rem;
+    display: flexbox;
+    justify-content: center;
+
+}
+
+.up {
+ width: 3rem;
+ height: 3rem;
+ border-radius: 0.5rem;
+}
+
+.replay {
+
+ width: 3rem;
+ height: 3rem;
+ border-radius: 0.5rem;
+}
+
+
+
+
+
